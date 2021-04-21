@@ -8,7 +8,8 @@ Create a GitHub Action file: `touch CI.yml`{{execute}}.
 
 In this file, we will specify the rules for our automatic testing and linting. We start by defining the name of our action, calling it `CI`.
 
-**Note:** The directory `.github` is hidden by default.
+**Note:** Names of files and directories starting with a `.` are considered to be hidden in Unix filesystems.
+You can visualize all files and directories in the current directory (including the hidden) by running: `ls -a`{{execute}}
 
 <pre class="file" data-filename=".github/workflows/CI.yml" data-target="replace"><code class="yml">name: CI</code></pre>
 

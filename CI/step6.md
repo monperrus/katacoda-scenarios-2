@@ -9,6 +9,9 @@ Install ESLint with npm: `npm install eslint --save-dev`{{execute}}.
 
 Next, create the configuration file `.eslintrc.json` in the current directory by running: `npx eslint --init`{{execute}}
 
+**Note:** Names of files and directories starting with a `.` are considered to be hidden in Unix filesystems.
+You can visualize all files and directories in the current directory (including the hidden) by running: `ls -a`{{execute}}
+
 Configure the project as follows:
 
     ✔ How would you like to use ESLint?

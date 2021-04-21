@@ -4,9 +4,9 @@
   "description": "A simple Node.js Express app, including automated testing and linting using Jest and Eslint",
   "main": "index.js",
   "scripts": {
-    "insert-lint":"",
+    "insert-lint": "",
     "start": "node src/index.js",
-    "insert-test":""
+    "insert-test": ""
   },
   "repository": {
     "type": "git",

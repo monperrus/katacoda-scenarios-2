@@ -37,7 +37,7 @@ Run the tests `npm run test`{{execute}}.
 
 #### Let's add some more mocked tests
 
-Click on `Copy to Editor` below to append the following tests to the file `api-mock.test.js`. These tests sends a DELETE request to the endpoint `/api/todos/:id`, including a todo id. This request simply asks the API to delete a todo with the specified id from the data model.
+Click on `Copy to Editor` below to append the following tests to the file `api-mock.test.js`. These tests send a DELETE request to the endpoint `/api/todos/:id`, including a todo id. This request simply asks the API to delete a todo with the specified id from the data model.
 
 <pre class="file" data-filename="server/tests/api-mock.test.js" data-target="append">
 describe('Todo endpoints - delete', () => {

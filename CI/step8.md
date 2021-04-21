@@ -2,7 +2,15 @@
 
 The source code of the complete project, including the code implemented in *steps 1-7*, resides in the branch `express-app-complete`. Checkout to this branch before you continue.
 
-#### Push dummy changes to activate the GitHub Action
+#### Activating the Github Action in your fork
+
+Github will have a problem recognizing our Action-file when forking a repository with the file already existing. To activate it, we must rename the Action-file and push the changes. This notifies Github to register the new file as a Github Action config file and the Actions magically start working. Let's do this!
+
+Rename the file `.github/workflows/CI.yml` to `.github/workflows/CI-fork.yml`.
+
+**Note:** It is important that you do not use Git's file renaming feature, since it will not fool Github that we have created a new file.
+
+#### Test the Action
 
 You can try pushing dummy changes to your project to see the status of the automatic tests, for instance, by changing a comment in the file `index.js`.
 

@@ -1,8 +1,8 @@
 {
   "title": "CI workflow using GitHub actions for Node.js, Express app, Jest and Eslint",
   "description": "Automated testing with jest. Linting wth Eslint. CI with GitHub Actions.",
-  "difficulty": "Beginner",
-  "time": "20 min",
+  "difficulty": "Intermediate",
+  "time": "30 min",
   "details": {
     "steps": [
       {

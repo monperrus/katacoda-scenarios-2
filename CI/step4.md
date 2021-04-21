@@ -5,9 +5,9 @@ Now we want to configure tests that will assert the correctness of our program u
 Install Jest and Supertest with npm:  
 `npm install jest supertest --save-dev`{{execute}}
 
-Next, click on `Copy to clipboard` below to define a test script in the file `package.json`. If you want to do this manually, replace `insert-test":""` with `"test": "jest"` in the same file.
+Next, click on `Copy to Editor` below to define a test script in the file `package.json`. If you want to do this manually, replace `insert-test": ""` with `"test": "jest"` in the same file.
 
-<pre class="file" data-filename="server/package.json" data-target="insert" data-marker='"insert-test":""'>"test": "jest"</pre>
+<pre class="file" data-filename="server/package.json" data-target="insert" data-marker='"insert-test": ""'>"test": "jest"</pre>
 
 We can now run `npm run test`{{execute}} to execute the tests. However, since we have not written any tests yet, the command will raise an error.
 
@@ -17,7 +17,7 @@ Create a test directory `mkdir tests`{{execute}}
 
 #### Using the Supertest module
 
-Click on `Copy to Editor` below to add the file `request.js` with the following content to the tests directory:
+Click on `Copy to Editor` below to add the file `request.js` with the following content to the tests directory.
 
 <pre class="file" data-filename="server/tests/request.js" data-target="replace">
 // Import the supertest module and the API server
@@ -59,9 +59,13 @@ describe('Todo endpoints - create', () => {
 
 Run the test `npm run test`{{execute}}.
 
-This test sends a POST request to the endpoint `/api/todos`, including a body with a valid name. Since the name is valid, we expect the `statusCode` to equal 201 and the return object having the properties `id` and `name`, where the `name` should have the same valid as sent in the request.
+This test sends a POST request to the endpoint `/api/todos`, including a body with a valid name. The name is valid if it:
+- Is 5-32 characters long
+- Is of type string
+- Includes only alphanumericals and blankspace
+This is validated in `policies/TodoPolicy.js`. Since the name is valid, we expect the `statusCode` to equal 201 and the return object having the properties `id` and `name`, where the `name` should have the same value as sent in the request.
 
-**Note:** We will introduce data model mocking in the next step of the tutorial.
+**Note:** For now, we interact directly with the data model, which means that we modify the data model while testing. As you might think, this is not sufficient! Later in the tutorial, we will mitigate this by mocking the data model.
 
 ##### Jest keywords
 

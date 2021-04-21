@@ -6,14 +6,14 @@ If you want to follow along with the tutorial on your computer instead of in the
 
 **Note:** This step is only required if you want to run the project locally; proceed to the next step if you continue on Katacoda.
 
-Start by installing Node and NPM, if not already installed. You can check if you have them installed by running the following three commands in the terminal (Linux):
+Start by installing Node and NPM, if not already installed. You can check if you have them installed by running the following two commands in the terminal:
 ```
 node -v
 npm -v
 ```{{execute}}
-If they are already installed you can jump to step 3.
+If they are already installed, you will see the node and npm versions printed and can proceed to step 3.
 
-#### 1. Install Node
+#### 1. Install Node (Linux)
 ```
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install -y nodejs

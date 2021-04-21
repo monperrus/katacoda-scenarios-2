@@ -119,4 +119,6 @@ The only difference is in the last step, where we run the tests instead of the l
       working-directory: ${{ env.working-directory }}
 ```
 
+Now to connect this file to Github and start using our Github Action the only step needed is to push the file to your GitHub repository, and it will automatically start working. We will showcase this in the next step.
+
 **Note:** All GitHub job runs in isolation in separate virtual machines. It is, therefore, necessary to re-set up our tests' environment for the testing job. One could use the same job for both testing and linting, but this implies that the second job won't run if the first job fails. Hence, separating them allows us to run both jobs either way. Also, each isolated job creates its GitHub status checks flag. Separating the jobs so on creates a more convenient output.

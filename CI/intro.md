@@ -14,4 +14,4 @@ This tutorial will go through the steps of setting up a pre-built Express applic
 
 #### Prerequisites
 
-This tutorial is aimed for users with basic programming knowledge, including JavaScript and Github.
+This tutorial is aimed for users with basic programming knowledge, including JavaScript and GitHub.

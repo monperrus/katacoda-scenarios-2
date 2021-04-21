@@ -2,7 +2,8 @@ The next step is to incorporate static code analysis in our project to mitigate 
 
 #### Installation
 
-Install ESLint with npm: `npm install eslint --save-dev`{{execute}}. Make sure that you are in the `server` folder before running this command.
+Make sure that you are in the `server` folder before proceeding.
+Install ESLint with npm: `npm install eslint --save-dev`{{execute}}. 
 
 **Note:** Installation could also be performed with `yarn`, [more information](https://eslint.org/docs/user-guide/getting-started).
 
@@ -50,7 +51,7 @@ To ease linting, we define two new scripts in the file `package.json`. Click on 
 
 Run: `npm run lint`{{execute}} to lint all files in the `src` directory.
 
-The linter will catch a few formatting errors. Let's fix them automatically by running: 
+The linter will catch a few formatting errors and return with an exit code. The output might seem scary at first, but don't worry! The errors have been added by intention and ESLint always exits with an error code if it finds errors! Let's fix them automatically by running: 
 `npm run lint:fix`{{execute}}
 
 Run `npm run lint`{{execute}} once again to check that the errors have been resolved.
@@ -61,8 +62,6 @@ ESLint is highly customizable and lets you define custom rules that work alongsi
 <pre class="file" data-filename="server/.eslintrc.json" data-target="insert" data-marker='"rules": {
     }'>
 "rules": { "quotes": ["error", "double"] }</pre>
-
-**Note:** The file `.eslintrc.json` is hidden by default.
 
 The rule enforces the source code always to use double-quotes and not single-quotes. The change introduces a few new errors since the source code includes a few single quotes.
 

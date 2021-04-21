@@ -27,13 +27,17 @@ describe('Todo endpoints - create', () => {
 
 Run the tests `npm run test`{{execute}}.
 
+##### Jest keywords
+
+- `jest.mock(moduleName)`- Mocks the module given as a parameter.
+
+- `mockFn.mockReturnValue(value)` - Takes an argument `value` which will be returned whenever the mock function `mockFn` is called. This function assumes that the mocked function is synchronous, which all calls to our data model are. However, these calls are asynchronous while using a persistent database. In that case, one must use the mocking function `mockResolvedValue(value)` instead, which is useful to mock asynchronous functions.
+
 **Note:** There is no need to mock the data model in the other tests we created in the previous step since the policy middleware sends the HTTP responses in these cases, which means that `Todos.create` never gets called.
 
-`jest.mock(moduleName)`- Mocks the module given as a parameter.
-
-`mockFn.mockReturnValue(value)` - Takes an argument `value` which will be returned whenever the mock function `mockFn` is called. This function assumes that the mocked function is synchronous, which all calls to our data model are. However, these calls are asynchronous while using a persistent database. In that case, one must use the mocking function `mockResolvedValue(value)` instead, which is useful to mock asynchronous functions.
-
 #### Let's add some more mocked tests
+
+Click on `Copy to Editor` below to append the following tests to the file `api-mock.test.js`. These tests sends a DELETE request to the endpoint `/api/todos/:id`, including a todo id. This request simply asks the API to delete a todo with the specified id from the data model.
 
 <pre class="file" data-filename="server/tests/api-mock.test.js" data-target="append">
 describe('Todo endpoints - delete', () => {

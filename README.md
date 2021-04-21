@@ -1,4 +1,4 @@
-# Interactive Katacoda Scenarios
+# Interactive Katacoda Scenarios :cat:
 
 [![](http://shields.katacoda.com/katacoda/nwessman/count.svg)](https://www.katacoda.com/nwessman "Our tutorials on Katacoda.com")
 

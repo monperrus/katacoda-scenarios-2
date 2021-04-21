@@ -24,4 +24,4 @@ This tutorial will utilize mocking to abstract the data model. Doing so empowers
 
 #### Static code analysis with ESLint
 
-ESLint is a static code analysis tool used to find bugs, programming, and code formatting errors. It is built into most text editors and is suitable to run as part of the CI pipeline. The tool also offers automatic syntax-aware error fixes for many problems that automatically resolve bugs and errors.
+ESLint is a static code analysis tool used to find bugs, programming, and code formatting errors. This process of finding these types of errors is called *Linting*. It is built into most text editors and is suitable to run as part of the CI pipeline. The tool also offers automatic syntax-aware error fixes for many problems that automatically resolve bugs and errors.
